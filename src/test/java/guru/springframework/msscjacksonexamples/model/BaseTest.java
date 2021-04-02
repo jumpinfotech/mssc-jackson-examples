@@ -12,10 +12,10 @@ import java.util.UUID;
  * Created by jt on 2019-06-02.
  */
 public class BaseTest {
-    @Autowired
+    @Autowired // get ObjectMapper that is configured by Spring Boot
     ObjectMapper objectMapper;
 
-    BeerDto getDto(){
+    BeerDto getDto(){ // helper method
         return  BeerDto.builder()
                 .beerName("BeerName")
                 .beerStyle("Ale")
@@ -24,7 +24,7 @@ public class BaseTest {
                 .lastUpdatedDate(OffsetDateTime.now())
                 .price(new BigDecimal("12.99"))
                 .upc(123123123123L)
-                .myLocalDate(LocalDate.now())
+                .myLocalDate(LocalDate.now()) // initialised = verify the JSON outputted
                 .build();
     }
 }

@@ -18,6 +18,7 @@ public class BeerDtoKebabTest extends BaseTest {
 
         String json = objectMapper.writeValueAsString(dto);
 
-        System.out.println(json);
+        System.out.println(json); // output has a hyphen between words e.g. 
+        // "beer-style":"Ale" 
     }
 }
